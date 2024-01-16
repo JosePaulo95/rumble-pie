@@ -73,3 +73,70 @@ button {
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.background {
+  background-color: rgb(255,204,0);
+  background-repeat: repeat; /* Repete o padrão */
+  position: absolute; /* Posicionamento absoluto */
+  z-index: -1; /* Coloca o background atrás de outros elementos */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Largura total */
+  height: 100%; /* Altura total */
+}
+
+.panel {
+  background-color: blue; /* Panel background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  width: 300px; /* Fixed width, adjust as necessary */
+  margin: auto; /* Center the panel */
+}
+
+.panel__header {
+  font-size: 24px; /* Large text for the header */
+  text-align: center; /* Center the text */
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+}
+
+.panel__body {
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  padding: 20px; /* Spacing inside the panel */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+}
+
+.panel__button {
+  background-color: #4a90e2; /* Button color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding inside the buttons */
+  margin-bottom: 10px; /* Space between buttons */
+  cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-transform: uppercase; /* Uppercase text for style */
+  outline: none; /* Remove focus outline */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.panel__button:hover {
+  background-color: #357abd; /* Darker button color on hover */
+}
+
+.panel__button:last-child {
+  margin-bottom: 0; /* Remove margin for the last button */
+}
+
+/* Ensure the panel and buttons are centered horizontally and vertically */
+.panel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
