@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'KenVector Future Thin';
+  src: url('./assets/fonts/kenvector_future_thin.ttf') format('truetype');
+}
+
 :root {
   --primay: black;
   --bg-primay: white;
@@ -76,41 +81,61 @@ button {
 
 .background {
   background-color: rgb(255,204,0);
-  background-repeat: repeat; /* Repete o padrão */
-  position: absolute; /* Posicionamento absoluto */
-  z-index: -1; /* Coloca o background atrás de outros elementos */
-  top: 0; /* Alinha ao topo */
-  left: 0; /* Alinha à esquerda */
-  width: 100%; /* Largura total */
-  height: 100%; /* Altura total */
+  background-repeat: repeat; 
+  position: absolute; 
+  z-index: -1; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }
 
 .panel {
-  background-color: blue; /* Panel background color */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-  width: 300px; /* Fixed width, adjust as necessary */
-  margin: auto; /* Center the panel */
+  font-family: 'KenVector Future Thin', sans-serif;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  width: 300px;
+  margin: auto;
+  color: white;
+  box-sizing: border-box;
 }
 
 .panel__header {
-  font-size: 24px; /* Large text for the header */
-  text-align: center; /* Center the text */
+  background-color: rgb(30,167,225);
+  border: 2px solid rgb(103, 186, 221);
+  box-shadow: 
+    -2px 0 0 0 rgb(17, 98, 133), 
+    2px 0 0 0 rgb(17, 98, 133),  
+    0 -2px 0 0 rgb(17, 98, 133);
+  box-sizing: border-box;
+  outline-offset: -4px;
+  border-radius: 6px 6px 0 0; 
+  font-size: 16px; 
+  text-align: center; 
   display: flex;
   justify-content: center;
-  margin: auto;
-  padding: 10px;
+  margin: 2px;
+  margin-bottom: -10px;
+  padding: 14px;
 }
 
 .panel__body {
-  border-radius: 20px 20px 0 0;
-  background-color: white;
+  margin: 2px;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 
+    -2px 0 0 0 rgb(165, 165, 165), 
+    2px 0 0 0 rgb(165, 165, 165),  
+    0 2px 0 0 rgb(165, 165, 165),  
+    0 -2px 0 0 rgb(165, 165, 165);
+  border-radius: 6px;
+  background-color: rgb(227, 227, 230);
   padding: 20px; /* Spacing inside the panel */
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
 }
 
 .panel__button {
+  font-family: 'KenVector Future Thin', sans-serif;
   background-color: #4a90e2; /* Button color */
   border: none; /* No border */
   border-radius: 5px; /* Rounded corners for buttons */
@@ -119,7 +144,6 @@ button {
   margin-bottom: 10px; /* Space between buttons */
   cursor: pointer; /* Cursor to pointer to indicate it's clickable */
   font-size: 16px; /* Font size */
-  font-weight: bold; /* Font weight */
   text-transform: uppercase; /* Uppercase text for style */
   outline: none; /* Remove focus outline */
   transition: background-color 0.3s ease; /* Transition for hover effect */
