@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'KenVectorFuture';
+    src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chewy-Regular';
+  src: url('../assets/fonts/Chewy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BubblegumSans-Regular';
+  src: url('../assets/fonts/BubblegumSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'KenVectorFutureThin';
+    src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* MenuPrincipal.css */
+body {
+    background-image: linear-gradient(
+      45deg,
+      #870b92 25%,
+      transparent 25%,
+      transparent 75%,
+      #870b92 75%,
+      #870b92
+    ),
+    linear-gradient(
+      -45deg,
+      #870b92 25%,
+      transparent 25%,
+      transparent 75%,
+      #870b92 75%,
+      #870b92
+    );
+    background-color: #5d0864;
+  background-size: 160px 160px;
+  background-repeat: repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'BubblegumSans-Regular';
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 8px solid black; /* Adiciona uma borda preta de 2 pixels */
+    min-width: 30vw;
+    box-shadow: 0 0 0 5px white; /* Adiciona uma borda branca de 5 pixels sobre a borda preta */
+    min-height: calc(5vh + 50px); /* Valor mínimo de altura */
+    max-height: 100vh; /* Valor máximo de altura */
+  }
+  
+  
+  h1 {
+    font-family: 'BubblegumSans-Regular', sans-serif; 
+    color: black;
+}
+
+
+  .menu-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'BubblegumSans-Regular';
+    cursor: pointer;
+    background-color: rgb(219, 182, 15);
+    color: rgb(113, 102, 2);
+    border: 1px solid rgb(92, 84, 11); /* Adiciona uma borda preta de 2 pixels */
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgb(255, 239, 93); /* Adiciona uma borda interna vermelha de 5 pixels */
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: rgb(200, 162, 5);
+  }
+  

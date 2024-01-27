@@ -14,7 +14,11 @@ function InGame() {
     return () => clearTimeout(timer);
   }, []);
 
-  return <div>{mostrarObjetivo ? <Objetivo texto="Bigode!" /> : <Game />}</div>;
+  return (
+    <div className="container">
+      {mostrarObjetivo ? <Objetivo texto="Bigode!" /> : <Game />}
+    </div>
+  );
 }
 
 export default InGame;
