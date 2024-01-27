@@ -1,0 +1,14 @@
+/* Game.css */
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .game-content {
+    text-align: center;
+  }
+  
+  /* Adicione estilos adicionais conforme necessário */
+  
