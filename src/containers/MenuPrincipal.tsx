@@ -12,6 +12,9 @@ function MenuPrincipal() {
       <Link to="/play">
         <button>Começar</button>
       </Link>
+      <Link to="/credits">
+        <button>Créditos</button>
+      </Link>
     </div>
   );
 }
