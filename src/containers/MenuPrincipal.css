@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'KenVectorFuture';
-    src: url('../assets/fonts/kenvector_future.ttf') format('truetype');
+    src: url('./assets/fonts/kenvector_future.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
   font-family: 'Chewy-Regular';
-  src: url('../assets/fonts/Chewy-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/Chewy-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'BubblegumSans-Regular';
-  src: url('../assets/fonts/BubblegumSans-Regular.ttf') format('truetype');
+  src: url('./assets/fonts/BubblegumSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'KenVectorFutureThin';
-    src: url('../assets/fonts/kenvector_future_thin.ttf') format('truetype');
+    src: url('./assets/fonts/kenvector_future_thin.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
