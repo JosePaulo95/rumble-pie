@@ -1,6 +1,7 @@
 // FaceTable.tsx
 import React from 'react';
 import './style.css';
+import FaceFactory from '../FaceFactory';
 
 interface FaceTableProps {
   currentLevel: number[][];
@@ -33,10 +34,9 @@ const FaceTable: React.FC<FaceTableProps> = ({
             <tr key={rowIndex}>
               {row.map((value, colIndex) => (
                 <td key={colIndex}>
-                  <div
-                    className={`face-cell ${value === 1 ? 'selected' : ''}`}
-                    onClick={() => handleClick(value)}
-                  />
+                  <div onClick={() => handleClick(value)}>
+                    <FaceFactory id={value} />
+                  </div>
                 </td>
               ))}
             </tr>
