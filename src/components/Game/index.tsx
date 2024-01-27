@@ -28,7 +28,16 @@ function Game() {
   useEffect(() => {
     // Auto submeter quando 3 caracteres são atingidos
     if (playerName.length === 3) {
+      const elapsedTime = endTime - 500 - startTime; // Calcular o tempo decorrido em milissegundos
+
+      // Salvar o novo score no localStorage
+      const newScore = { name: playerName, time: elapsedTime };
+      const existingScores = JSON.parse(localStorage.getItem('leaderboard')) || [];
+      const updatedScores = [...existingScores, newScore].sort((a, b) => a.time - b.time);
+      localStorage.setItem('leaderboard', JSON.stringify(updatedScores));
+
       setGameInProgress(false);
+
       setTimeout(() => {
         navigate('/');
       }, 500);
@@ -114,8 +123,8 @@ function Game() {
           />
 
           <h2>
-            ({findPlayerPosition(endTime - startTime)}º lugar) Tempo:{' '}
-            {formatTime(endTime - startTime)}{' '}
+            ({findPlayerPosition(endTime - startTime - 500)}º lugar) Tempo:{' '}
+            {formatTime(endTime - 500 - startTime)}{' '}
           </h2>
         </div>
       )}
