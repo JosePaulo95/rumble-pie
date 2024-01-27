@@ -9,7 +9,7 @@ import { generateLevel } from '../../utils/generateLevel';
 
 function Game() {
   const [currentLevel, setCurrentLevel] = useState<number[][]>([]);
-  const [currentProgress, setCurrentProgress] = useState(0);
+  const [currentProgress, setCurrentProgress] = useState(-1);
   const [gameInProgress, setGameInProgress] = useState(true);
   const navigate = useNavigate(); // Utiliza o hook useNavigate para redirecionamento
 

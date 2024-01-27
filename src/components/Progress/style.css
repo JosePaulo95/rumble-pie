@@ -1,0 +1,10 @@
+.progress-container {
+  margin: 2vh;
+}
+
+.pie-images {
+  display: flex;
+  font-size: 4vh;
+  letter-spacing: -2vh;
+  justify-content: center;
+}

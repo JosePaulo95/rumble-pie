@@ -1,4 +1,5 @@
 // Timer.tsx
+import './style.css';
 import React, { useEffect, useState } from 'react';
 import { formatTime } from '../../utils/formatTime';
 
@@ -28,8 +29,12 @@ const Timer: React.FC<TimerProps> = ({ bestTime, gameInProgress }) => {
 
   return (
     <div className="timer-container">
-      <p>Tempo Atual: {formatTime(currentTime)}</p>
-      <p>Recorde: {formatTime(bestTime)}</p>
+      <div>
+        <p>⌚ {formatTime(currentTime)}</p>
+      </div>
+      <div>
+        <p>👑 {formatTime(bestTime)}</p>
+      </div>
     </div>
   );
 };
