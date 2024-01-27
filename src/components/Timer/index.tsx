@@ -33,7 +33,7 @@ const Timer: React.FC<TimerProps> = ({ bestTime, gameInProgress }) => {
         <p>⌚ {formatTime(currentTime)}</p>
       </div>
       <div>
-        <p>👑 {formatTime(bestTime)}</p>
+        <p>👑 {bestTime ? formatTime(bestTime) : '--:--'}</p>
       </div>
     </div>
   );

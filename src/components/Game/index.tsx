@@ -6,7 +6,7 @@ import Timer from '../Timer';
 import { generateLevel } from '../../utils/generateLevel';
 import { formatTime } from '../../utils/formatTime';
 import { findPlayerPosition } from '../../utils/score';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface GameProps {
   objetivoId: number;
@@ -19,6 +19,7 @@ function Game({ objetivoId }: GameProps) {
   const [currentScreen, setCurrentScreen] = useState('playing');
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
+  const [bestTime, setBestTime] = useState(0);
 
   const [playerName, setPlayerName] = useState('');
 
@@ -49,6 +50,9 @@ function Game({ objetivoId }: GameProps) {
   }, [playerName]);
 
   useEffect(() => {
+    const existingScores = JSON.parse(localStorage.getItem('leaderboard')) || [];
+
+    setBestTime(existingScores.sort((a, b) => a.time - b.time)[0]?.time);
     setStartTime(Date.now());
     generateNewLevel();
   }, []);
@@ -87,7 +91,7 @@ function Game({ objetivoId }: GameProps) {
         <div>
           screen playing:
           <div className="subcontainer-flex1">
-            <Timer bestTime={4500} gameInProgress={gameInProgress} />
+            <Timer bestTime={bestTime} gameInProgress={gameInProgress} />
           </div>
           <div className="subcontainer-flex3">
             <FaceTable
@@ -104,35 +108,49 @@ function Game({ objetivoId }: GameProps) {
         </div>
       )}
 
-      {currentScreen === 'score' && (
-        <div>
-          <input
-            style={{
-              textAlign: 'center',
-              border: 'none',
-              outline: 'none',
-              color: 'purple',
-              fontSize: '3.5em',
-              width: '3em', // Ajuste o valor conforme desejado
-              textTransform: 'uppercase',
-              fontWeight: 'bold',
-              fontFamily: 'BubblegumSans-Regular',
-            }}
-            disabled={!gameInProgress}
-            type="text"
-            id="playerName"
-            value={playerName}
-            onChange={handleInputChange}
-            maxLength="3"
-            autoFocus
-          />
+      {currentScreen === 'score' &&
+        findPlayerPosition(endTime - startTime - 500 - 100) < 5 && (
+          <div>
+            <input
+              style={{
+                textAlign: 'center',
+                border: 'none',
+                outline: 'none',
+                color: 'purple',
+                fontSize: '3.5em',
+                width: '3em', // Ajuste o valor conforme desejado
+                textTransform: 'uppercase',
+                fontWeight: 'bold',
+                fontFamily: 'BubblegumSans-Regular',
+              }}
+              disabled={!gameInProgress}
+              type="text"
+              id="playerName"
+              value={playerName}
+              onChange={handleInputChange}
+              maxLength="3"
+              autoFocus
+            />
 
-          <h2>
-            ({findPlayerPosition(endTime - startTime - 500 - 100) + 1}º lugar) Tempo:{' '}
-            {formatTime(endTime - startTime - 1000)}{' '}
-          </h2>
-        </div>
-      )}
+            <h2>
+              ({findPlayerPosition(endTime - startTime - 500 - 100) + 1}º lugar) Tempo:{' '}
+              {formatTime(endTime - startTime - 1000)}{' '}
+            </h2>
+          </div>
+        )}
+
+      {currentScreen === 'score' &&
+        findPlayerPosition(endTime - startTime - 500 - 100) >= 5 && (
+          <div>
+            <h2>
+              ({findPlayerPosition(endTime - startTime - 500 - 100) + 1}º lugar) Tempo:{' '}
+              {formatTime(endTime - startTime - 1000)}{' '}
+            </h2>
+            <Link to="/">
+              <button className="menu-button">Okay</button>
+            </Link>
+          </div>
+        )}
     </div>
   );
 }
