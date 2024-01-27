@@ -6,7 +6,7 @@ const Credits: React.FC = () => {
   return (
     <div className="container credits-container">
       <h1>Créditos</h1>
-      <p>Feito com React.js na Global Game Jam 2024</p>
+      <p>Feito em 48h com React.js na Global Game Jam 2024</p>
       <p>Pablo Wauis - Arte 2D</p>
       <p>José Paulo - Programador</p>
 

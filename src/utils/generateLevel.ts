@@ -8,7 +8,7 @@ const shuffleArray = (array) => {
 };
 
 // Importe a função Math.random
-export const generateLevel = (objetivoId: number) => {
+export const generateLevel = (objetivoId: number): string[][] => {
     // Array de tamanho 9 preenchido com os números 1, 2, 3 e 4
     const shuffledArray = Array.from({ length: 9 }, () => Math.floor(Math.random() * 4) + 1);
 

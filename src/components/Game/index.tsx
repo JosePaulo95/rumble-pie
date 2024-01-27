@@ -13,7 +13,7 @@ interface GameProps {
 }
 
 function Game({ objetivoId }: GameProps) {
-  const [currentLevel, setCurrentLevel] = useState<number[][]>([]);
+  const [currentLevel, setCurrentLevel] = useState<string[][]>([]);
   const [currentProgress, setCurrentProgress] = useState(-1);
   const [gameInProgress, setGameInProgress] = useState(true);
   const [currentScreen, setCurrentScreen] = useState('playing');

@@ -47,7 +47,7 @@ const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
           {filledData.slice(0, numrows).map((entry, index) => (
             <tr key={index}>
               <td style={{ textAlign: 'right' }}>{getMedalEmoji(index) + (index + 1)}</td>
-              <td style={{ textAlign: 'right' }}>{entry.name}</td>
+              <td style={{ textAlign: 'right' }}>{entry.name.toUpperCase()}</td>
               <td style={{ textAlign: 'right' }}>{formatTime(entry.time)}</td>
             </tr>
           ))}
