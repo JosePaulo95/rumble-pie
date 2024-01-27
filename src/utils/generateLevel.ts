@@ -1,29 +1,25 @@
 // Importe a função Math.random
 export const generateLevel = () => {
-    const opt1 = [
-        [1, 1, 0],
-        [1, 1, 0],
-        [1, 1, 0],
-    ];
+    // Array de tamanho 9 preenchido com os números 1, 2, 3 e 4
+    const shuffledArray = Array.from({ length: 9 }, () => Math.floor(Math.random() * 4) + 1);
 
-    const opt2 = [
-        [0, 1, 0],
-        [1, 0, 1],
-        [0, 1, 0],
-    ];
+    // Função para embaralhar o array usando o algoritmo de Fisher-Yates
+    const shuffleArray = (array) => {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    };
 
-    const opt3 = [
-        [1, 0, 1],
-        [0, 1, 0],
-        [1, 0, 1],
-    ];
+    // Embaralha o array
+    const shuffledGrid = shuffleArray(shuffledArray);
 
-    // Array contendo as opções
-    const options = [opt1, opt2, opt3];
+    // Converte o array embaralhado de tamanho 9 para uma matriz 3x3
+    const grid = [];
+    for (let i = 0; i < 3; i++) {
+        grid.push(shuffledGrid.slice(i * 3, i * 3 + 3));
+    }
 
-    // Escolhe aleatoriamente uma das opções
-    const randomIndex = Math.floor(Math.random() * options.length);
-    const randomOption = options[randomIndex];
-
-    return randomOption;
+    return grid;
 };

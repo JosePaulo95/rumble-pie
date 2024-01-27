@@ -12,12 +12,25 @@
   }
   
   .face-cell {
-    background-image: url("./assets/img/personagem-1/1.svg");
     width: 10vw;
     height: 10vw;
     border: 1px solid #ddd; /* Borda para separar as células (opcional) */
   }
   
+  .face-1 {
+    background-image: url("./assets/img/personagem-1/1.svg");
+  }
+
+  .face-2 {
+    background-image: url("./assets/img/personagem-2/2.svg");
+  }
+  .face-3 {
+    background-image: url("./assets/img/personagem-3/3.svg");
+  }
+  .face-4 {
+    background-image: url("./assets/img/personagem-4/4.svg");
+  }
+
   .face-cell.selected {
     background-color: #00f; /* Cor de fundo para rostos selecionados (altere conforme necessário) */
     cursor: pointer;
