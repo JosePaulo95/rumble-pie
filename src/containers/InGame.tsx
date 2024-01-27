@@ -5,8 +5,10 @@ import Game from '../components/Game';
 
 function InGame() {
   const [mostrarObjetivo, setMostrarObjetivo] = useState(true);
+  const [objetivoId, setObjetivoId] = useState(0);
 
   useEffect(() => {
+    setObjetivoId(Math.floor(Math.random() * 4) + 1);
     const timer = setTimeout(() => {
       setMostrarObjetivo(false);
     }, 1000);
@@ -16,7 +18,11 @@ function InGame() {
 
   return (
     <div className="container">
-      {mostrarObjetivo ? <Objetivo texto="Bigode!" /> : <Game />}
+      {mostrarObjetivo ? (
+        <Objetivo objetivoId={objetivoId} />
+      ) : (
+        <Game objetivoId={objetivoId} />
+      )}
     </div>
   );
 }

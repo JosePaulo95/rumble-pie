@@ -8,7 +8,11 @@ import { formatTime } from '../../utils/formatTime';
 import { findPlayerPosition } from '../../utils/score';
 import { useNavigate } from 'react-router-dom';
 
-function Game() {
+interface GameProps {
+  objetivoId: number;
+}
+
+function Game({ objetivoId }: GameProps) {
   const [currentLevel, setCurrentLevel] = useState<number[][]>([]);
   const [currentProgress, setCurrentProgress] = useState(-1);
   const [gameInProgress, setGameInProgress] = useState(true);
@@ -50,7 +54,7 @@ function Game() {
   }, []);
 
   const generateNewLevel = () => {
-    setCurrentLevel(generateLevel());
+    setCurrentLevel(generateLevel(objetivoId));
     setCurrentProgress(currentProgress + 1);
     setGameInProgress(true);
     setCurrentScreen('playing');
