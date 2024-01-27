@@ -2,15 +2,15 @@
 export const mockedLeaderboardData = [
     {
       name: "Sid",
-      time: 30
+      time: 20000
     },
     {
       name: "Sid",
-      time: 30
+      time: 1000
     },
     {
       name: "Sid",
-      time: 30
+      time: 500
     },
 ];
 

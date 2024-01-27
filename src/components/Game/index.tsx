@@ -5,6 +5,8 @@ import FaceTable from '../FaceTable';
 import Timer from '../Timer';
 import { generateLevel } from '../../utils/generateLevel';
 import { formatTime } from '../../utils/formatTime';
+import { findPlayerPosition } from '../../utils/score';
+import { useNavigate } from 'react-router-dom';
 
 function Game() {
   const [currentLevel, setCurrentLevel] = useState<number[][]>([]);
@@ -22,11 +24,14 @@ function Game() {
     setPlayerName(inputName);
   };
 
+  const navigate = useNavigate();
   useEffect(() => {
     // Auto submeter quando 3 caracteres são atingidos
     if (playerName.length === 3) {
-      // onSubmit(playerName);
-      alert('mandei ' + playerName);
+      setGameInProgress(false);
+      setTimeout(() => {
+        navigate('/');
+      }, 500);
     }
   }, [playerName]);
 
@@ -46,7 +51,10 @@ function Game() {
     setGameInProgress(false);
     if (currentProgress >= 2) {
       setEndTime(Date.now());
-      setCurrentScreen('score');
+      setTimeout(() => {
+        setCurrentScreen('score');
+        setGameInProgress(true);
+      }, 500);
     } else {
       setTimeout(() => generateNewLevel(), 500);
     }
@@ -86,13 +94,17 @@ function Game() {
         <div>
           <input
             style={{
+              textAlign: 'center',
               border: 'none',
               outline: 'none',
               color: 'purple',
               fontSize: '3.5em',
-              width: '2em', // Ajuste o valor conforme desejado
+              width: '3em', // Ajuste o valor conforme desejado
               textTransform: 'uppercase',
+              fontWeight: 'bold',
+              fontFamily: 'BubblegumSans-Regular',
             }}
+            disabled={!gameInProgress}
             type="text"
             id="playerName"
             value={playerName}
@@ -101,7 +113,10 @@ function Game() {
             autoFocus
           />
 
-          <h2>Tempo: {formatTime(endTime - startTime)} </h2>
+          <h2>
+            ({findPlayerPosition(endTime - startTime)}º lugar) Tempo:{' '}
+            {formatTime(endTime - startTime)}{' '}
+          </h2>
         </div>
       )}
     </div>
