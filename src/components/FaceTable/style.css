@@ -12,6 +12,7 @@
   }
   
   .face-cell {
+    background-image: url("./assets/img/personagem-1/1.svg");
     width: 10vw;
     height: 10vw;
     border: 1px solid #ddd; /* Borda para separar as células (opcional) */

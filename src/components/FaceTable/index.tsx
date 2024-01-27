@@ -34,9 +34,10 @@ const FaceTable: React.FC<FaceTableProps> = ({
             <tr key={rowIndex}>
               {row.map((value, colIndex) => (
                 <td key={colIndex}>
-                  <div onClick={() => handleClick(value)}>
-                    <FaceFactory id={value} />
-                  </div>
+                  <div
+                    className={`face-cell face-${value}`}
+                    onClick={() => handleClick(value)}
+                  ></div>
                 </td>
               ))}
             </tr>
