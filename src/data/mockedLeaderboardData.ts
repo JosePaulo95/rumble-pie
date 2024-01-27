@@ -13,3 +13,9 @@ export const mockedLeaderboardData = [
       time: 30
     },
 ];
+
+export const levelExample = [
+  [1,1,0],
+  [1,1,0],
+  [1,1,0],
+]

@@ -1,14 +1,11 @@
 // FaceTable.tsx
 import React from 'react';
+import './style.css'; // Importe o arquivo CSS para a estilização
 
 interface FaceTableProps {
-  currentLevel: Level;
+  currentLevel: number[][];
   onCorrectShot: () => void;
   onMistakenShot: () => void;
-}
-
-interface Level {
-  // Defina a estrutura do objeto Level conforme necessário
 }
 
 const FaceTable: React.FC<FaceTableProps> = ({
@@ -16,9 +13,33 @@ const FaceTable: React.FC<FaceTableProps> = ({
   onCorrectShot,
   onMistakenShot,
 }) => {
-  // Lógica para renderizar a tabela de rostos e lidar com as seleções
+  const handleClick = (value: number) => {
+    if (value === 1) {
+      onCorrectShot();
+    } else {
+      onMistakenShot();
+    }
+  };
+
   return (
-    <div className="face-table-container">{/* Conteúdo da tabela de rostos aqui */}</div>
+    <div className="face-table-container">
+      <table className="custom-table">
+        <tbody>
+          {currentLevel.map((row, rowIndex) => (
+            <tr key={rowIndex}>
+              {row.map((value, colIndex) => (
+                <td key={colIndex}>
+                  <div
+                    className={`face-cell ${value === 1 ? 'selected' : ''}`}
+                    onClick={() => handleClick(value)}
+                  />
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
