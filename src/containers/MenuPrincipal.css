@@ -65,9 +65,9 @@ body {
     padding: 20px;
     border-radius: 8px;
     border: 8px solid black; /* Adiciona uma borda preta de 2 pixels */
-    min-width: 30vw;
     box-shadow: 0 0 0 5px white; /* Adiciona uma borda branca de 5 pixels sobre a borda preta */
-    min-height: calc(5vh + 50px); /* Valor mínimo de altura */
+    min-width: 30vw;
+    min-height: 80vh; /* Valor mínimo de altura */
     max-height: 100vh; /* Valor máximo de altura */
   }
   
