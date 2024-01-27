@@ -1,23 +1,27 @@
 // FaceTable.tsx
 import React from 'react';
-import './style.css'; // Importe o arquivo CSS para a estilização
+import './style.css';
 
 interface FaceTableProps {
   currentLevel: number[][];
   onCorrectShot: () => void;
   onMistakenShot: () => void;
+  gameInProgress: boolean; // Adiciona a propriedade gameInProgress
 }
 
 const FaceTable: React.FC<FaceTableProps> = ({
   currentLevel,
   onCorrectShot,
   onMistakenShot,
+  gameInProgress,
 }) => {
   const handleClick = (value: number) => {
-    if (value === 1) {
-      onCorrectShot();
-    } else {
-      onMistakenShot();
+    if (gameInProgress) {
+      if (value === 1) {
+        onCorrectShot();
+      } else {
+        onMistakenShot();
+      }
     }
   };
 

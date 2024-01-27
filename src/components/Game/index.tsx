@@ -33,19 +33,20 @@ function Game() {
     setGameInProgress(false);
     setTimeout(() => {
       navigate('/'); // Usa o navigate para redirecionamento
-    }, 3000);
+    }, 1500);
   };
 
   return (
     <div className="vertical-container">
       <div className="subcontainer-flex1">
-        <Timer bestTime={4500} />
+        <Timer bestTime={4500} gameInProgress={gameInProgress} />
       </div>
       <div className="subcontainer-flex3">
         <FaceTable
           currentLevel={currentLevel}
           onCorrectShot={handleCorrectShot}
           onMistakenShot={handleMistakenShot}
+          gameInProgress={gameInProgress}
         />
       </div>
       <div className="subcontainer-flex1">
