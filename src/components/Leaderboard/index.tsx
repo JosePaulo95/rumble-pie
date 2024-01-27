@@ -28,7 +28,7 @@ const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
   const filledData = [
     ...sortedData,
     ...(sortedData.length < numrows
-      ? Array(numrows - sortedData.length).fill({ name: '---', time: 0 })
+      ? Array(numrows - sortedData.length).fill({ name: '___', time: 0 })
       : []),
   ];
 
@@ -48,7 +48,9 @@ const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
             <tr key={index}>
               <td style={{ textAlign: 'right' }}>{getMedalEmoji(index) + (index + 1)}</td>
               <td style={{ textAlign: 'right' }}>{entry.name.toUpperCase()}</td>
-              <td style={{ textAlign: 'right' }}>{formatTime(entry.time)}</td>
+              <td style={{ textAlign: 'right' }}>
+                {entry.time ? formatTime(entry.time) : '--:--'}
+              </td>
             </tr>
           ))}
         </tbody>

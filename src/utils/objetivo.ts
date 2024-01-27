@@ -7,7 +7,7 @@ export const getTextObjetivo = (id: number) => {
         case 3:
             return "Boné"
         case 4:
-            return "Chapéu"
+            return "Cartola"
         default:
             return "-"
     }

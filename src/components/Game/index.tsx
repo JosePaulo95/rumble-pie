@@ -66,7 +66,7 @@ function Game({ objetivoId }: GameProps) {
 
   const handleCorrectShot = () => {
     setGameInProgress(false);
-    if (currentProgress >= 2) {
+    if (currentProgress >= 9) {
       setEndTime(Date.now());
       setTimeout(() => {
         setCurrentScreen('score');
@@ -81,7 +81,7 @@ function Game({ objetivoId }: GameProps) {
     alert('errado!');
     setGameInProgress(false);
     setTimeout(() => {
-      setCurrentScreen('menu');
+      navigate('/');
     }, 1500);
   };
 

@@ -9,8 +9,8 @@ interface ObjetivoProps {
 function Objetivo({ objetivoId }: ObjetivoProps) {
   return (
     <div className="objetivo-content">
-      <h2>Objetivo:</h2>
-      <p>{getTextObjetivo(objetivoId)}</p>
+      <h1>Objetivo:</h1>
+      <h2>{getTextObjetivo(objetivoId)}</h2>
     </div>
   );
 }
