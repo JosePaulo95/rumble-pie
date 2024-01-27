@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import logo from './logo.svg';
 
-function App() {
+function App2() {
   const [count, setCount] = useState(0);
 
   return (
@@ -28,4 +28,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
