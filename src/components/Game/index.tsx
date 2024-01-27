@@ -32,19 +32,19 @@ function Game({ objetivoId }: GameProps) {
   useEffect(() => {
     // Auto submeter quando 3 caracteres são atingidos
     if (playerName.length === 3) {
-      const elapsedTime = endTime - 500 - startTime; // Calcular o tempo decorrido em milissegundos
+      const elapsedTime = endTime - 500 - startTime - 100; // Calcular o tempo decorrido em milissegundos
 
       // Salvar o novo score no localStorage
       const newScore = { name: playerName, time: elapsedTime };
       const existingScores = JSON.parse(localStorage.getItem('leaderboard')) || [];
       const updatedScores = [...existingScores, newScore].sort((a, b) => a.time - b.time);
-      localStorage.setItem('leaderboard', JSON.stringify(updatedScores));
 
       setGameInProgress(false);
 
       setTimeout(() => {
+        localStorage.setItem('leaderboard', JSON.stringify(updatedScores));
         navigate('/');
-      }, 500);
+      }, 1500);
     }
   }, [playerName]);
 
@@ -91,6 +91,7 @@ function Game({ objetivoId }: GameProps) {
           </div>
           <div className="subcontainer-flex3">
             <FaceTable
+              objetivoId={objetivoId}
               currentLevel={currentLevel}
               onCorrectShot={handleCorrectShot}
               onMistakenShot={handleMistakenShot}
@@ -127,8 +128,8 @@ function Game({ objetivoId }: GameProps) {
           />
 
           <h2>
-            ({findPlayerPosition(endTime - startTime - 500)}º lugar) Tempo:{' '}
-            {formatTime(endTime - 500 - startTime)}{' '}
+            ({findPlayerPosition(endTime - startTime - 500 - 100) + 1}º lugar) Tempo:{' '}
+            {formatTime(endTime - startTime - 1000)}{' '}
           </h2>
         </div>
       )}

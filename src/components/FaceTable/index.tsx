@@ -4,21 +4,24 @@ import './style.css';
 import FaceFactory from '../FaceFactory';
 
 interface FaceTableProps {
-  currentLevel: number[][];
+  objetivoId: number;
+  currentLevel: string[][];
   onCorrectShot: () => void;
   onMistakenShot: () => void;
   gameInProgress: boolean; // Adiciona a propriedade gameInProgress
 }
 
 const FaceTable: React.FC<FaceTableProps> = ({
+  objetivoId,
   currentLevel,
   onCorrectShot,
   onMistakenShot,
   gameInProgress,
 }) => {
-  const handleClick = (value: number) => {
+  const handleClick = (value: string, correct: number) => {
+    const shot = value.split('-')[1];
     if (gameInProgress) {
-      if (value === 1) {
+      if (String(shot) === String(correct)) {
         onCorrectShot();
       } else {
         onMistakenShot();
@@ -36,7 +39,7 @@ const FaceTable: React.FC<FaceTableProps> = ({
                 <td key={colIndex}>
                   <div
                     className={`face-cell face-${value}`}
-                    onClick={() => handleClick(value)}
+                    onClick={() => handleClick(value, objetivoId)}
                   ></div>
                 </td>
               ))}

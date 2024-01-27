@@ -23,9 +23,13 @@ const getMedalEmoji = (index: number): string => {
 const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
   // Preenche as linhas restantes com valores padrão
   const sortedData = [...data].sort((a, b) => a.time - b.time);
+
+  // Verifica se sortedData está vazio antes de realizar a operação
   const filledData = [
     ...sortedData,
-    ...Array(numrows - sortedData.length).fill({ name: '---', time: 0 }),
+    ...(sortedData.length < numrows
+      ? Array(numrows - sortedData.length).fill({ name: '---', time: 0 })
+      : []),
   ];
 
   return (
