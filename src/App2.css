@@ -31,6 +31,6 @@
   /* height: 45px; */
   aspect-ratio: 4.2;
   box-sizing: border-box;
-  background-image: url('./assets/clean-ui/yellow_button03.png'); /* Caminho para o SVG */
+  background-image: url('./clean-ui/yellow_button03.png'); /* Caminho para o SVG */
   background-size: cover;
 }

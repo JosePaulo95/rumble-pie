@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'KenVector Future Thin';
-  src: url('./assets/fonts/kenvector_future_thin.ttf') format('truetype');
+  src: url('./fonts/kenvector_future_thin.ttf') format('truetype');
 }
 
 :root {
@@ -100,7 +100,7 @@ button {
 }
 
 .panel__header {
-  background-image: url('./assets/clean-ui/yellow_button03.png'); /* Caminho para o SVG */
+  background-image: url('./clean-ui/yellow_button03.png'); /* Caminho para o SVG */
   background-size: cover;
   font-size: 16px;
   text-align: center;
@@ -114,7 +114,7 @@ button {
 .svg-button {
   width: 100%; /* ou outra largura desejada */
   position: relative;
-  background-image: url('./assets/clean-ui/yellow_button03.png'); /* Caminho para o SVG */
+  background-image: url('./clean-ui/yellow_button03.png'); /* Caminho para o SVG */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -122,7 +122,7 @@ button {
 }
 
 .panel__body {
-  background-image: url('./assets/clean-ui/grey_panel.png'); /* Caminho para o SVG */
+  background-image: url('./clean-ui/grey_panel.png'); /* Caminho para o SVG */
   background-size: cover;
   background-color: rgb(227, 227, 230);
   padding: 20px;
@@ -131,7 +131,7 @@ button {
 }
 
 .panel__button {
-  background-image: url('./assets/clean-ui/grey_panel.png'); /* Caminho para o SVG */
+  background-image: url('./clean-ui/grey_panel.png'); /* Caminho para o SVG */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

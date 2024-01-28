@@ -7,25 +7,25 @@
 
 .personagem-1 {
   background-color: red;
-  background-image: url('./assets/personagem-1/1.svg');
+  background-image: url('./personagem-1/1.svg');
   width: 2vh;
   height: 2vh;
 }
 
 .personagem-2 {
-  background-image: url('./assets/img/personagem 1/1.svg');
+  background-image: url('./img/personagem 1/1.svg');
   width: 2vh;
   height: 2vh;
 }
 
 .personagem-3 {
-  background-image: url('./assets/img/personagem 1/1.svg');
+  background-image: url('./img/personagem 1/1.svg');
   width: 2vh;
   height: 2vh;
 }
 
 .personagem-4 {
-  background-image: url('./assets/img/personagem 1/1.svg');
+  background-image: url('./img/personagem 1/1.svg');
   width: 2vh;
   height: 2vh;
 }

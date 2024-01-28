@@ -15,7 +15,7 @@ const Pie: React.FC<PieProps> = ({ show }) => {
             position: 'relative',
             width: '100%',
             height: '100%',
-            // background: 'url("./assets/img/0-torta-1.svg")',
+            // background: 'url("./img/0-torta-1.svg")',
             backgroundSize: 'cover',
           }}
         >
@@ -28,7 +28,7 @@ const Pie: React.FC<PieProps> = ({ show }) => {
               position: 'absolute',
               width: '100%',
               height: '100%',
-              background: 'url("./assets/img/0-torta-1.svg")',
+              background: 'url("./img/0-torta-1.svg")',
               backgroundSize: 'cover',
             }}
           ></motion.div>
@@ -41,7 +41,7 @@ const Pie: React.FC<PieProps> = ({ show }) => {
               position: 'absolute',
               width: '100%',
               height: '100%',
-              background: 'url("./assets/img/0-torta-2.svg")',
+              background: 'url("./img/0-torta-2.svg")',
               backgroundSize: 'cover',
             }}
           ></motion.div>

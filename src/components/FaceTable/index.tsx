@@ -22,11 +22,11 @@ const FaceTable: React.FC<FaceTableProps> = ({
   gameInProgress,
 }) => {
   const splash_sound = new Howl({
-    src: ['./assets/sound/splash sound.m4a'],
+    src: ['./sound/splash sound.m4a'],
   });
 
   const wrong_sound = new Howl({
-    src: ['./assets/sound/wrong sound.m4a'],
+    src: ['./sound/wrong sound.m4a'],
   });
 
   const [showPieMatrix, setShowPieMatrix] = useState(

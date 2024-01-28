@@ -15,7 +15,7 @@ const Progress: React.FC<ProgressProps> = ({ max, current }) => {
   return (
     <div className="progress-container">
       {pieArray.map((_, index) => (
-        <img key={index} style={{ width: '3vw' }} src="./assets/img/pie.svg" alt="" />
+        <img key={index} style={{ width: '3vw' }} src="./img/pie.svg" alt="" />
       ))}
     </div>
   );

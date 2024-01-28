@@ -1,7 +1,7 @@
 .pie {
   width: 10vw;
   height: 10vw;
-  background: url('./assets/img/0-torta.svg') no-repeat center center;
+  background: url('./img/0-torta.svg') no-repeat center center;
   background-size: cover;
   position: absolute;
   opacity: 0;
