@@ -129,7 +129,9 @@ const FaceTable: React.FC<FaceTableProps> = ({
                   key={colIndex}
                 >
                   <div
-                    className={`face-cell face-${value}`}
+                    className={`face-cell face-${value}-${
+                      showFeedbackBg[rowIndex] && showFeedbackBg[rowIndex][colIndex]
+                    }`}
                     onClick={() => handleClick(rowIndex, colIndex, objetivoId)}
                   >
                     <Pie

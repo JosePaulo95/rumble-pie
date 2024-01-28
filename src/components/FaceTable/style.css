@@ -32,57 +32,109 @@
   background-size: cover;
 }
 
-.face-1-1 {
+.face-1-1-face-background, .face-1-1-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-1/1-1.svg');
 }
-.face-2-1 {
+.face-2-1-face-background, .face-2-1-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-2/2-1.svg');
 }
-.face-3-1 {
+.face-3-1-face-background, .face-3-1-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-3/3-1.svg');
 }
-.face-4-1 {
+.face-4-1-face-background, .face-4-1-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-4/4-1.svg');
 }
 
-.face-1-2 {
+.face-1-2-face-background, .face-1-2-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-1/1-2.svg');
 }
-.face-2-2 {
+.face-2-2-face-background, .face-2-2-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-2/2-2.svg');
 }
-.face-3-2 {
+.face-3-2-face-background, .face-3-2-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-3/3-2.svg');
 }
-.face-4-2 {
+.face-4-2-face-background, .face-4-2-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-4/4-2.svg');
 }
 
-.face-1-3 {
+.face-1-3-face-background, .face-1-3-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-1/1-3.svg');
 }
-.face-2-3 {
+.face-2-3-face-background, .face-2-3-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-2/2-3.svg');
 }
-.face-3-3 {
+.face-3-3-face-background, .face-3-3-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-3/3-3.svg');
 }
-.face-4-3 {
+.face-4-3-face-background, .face-4-3-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-4/4-3.svg');
 }
 
-.face-1-4 {
+.face-1-4-face-background, .face-1-4-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-1/1-4.svg');
 }
-.face-2-4 {
+.face-2-4-face-background, .face-2-4-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-2/2-4.svg');
 }
-.face-3-4 {
+.face-3-4-face-background, .face-3-4-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-3/3-4.svg');
 }
-.face-4-4 {
+.face-4-4-face-background, .face-4-4-feedback-bg-wrong {
   background-image: url('./assets/img/personagem-4/4-4.svg');
 }
+
+
+/* rindo */
+.face-1-1-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/1-1.svg');
+}
+.face-2-1-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/2-1.svg');
+}
+.face-3-1-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/3-1.svg');
+}
+.face-4-1-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/4-1.svg');
+}
+.face-1-2-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/1-2.svg');
+}
+.face-2-2-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/2-2.svg');
+}
+.face-3-2-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/3-2.svg');
+}
+.face-4-2-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/4-2.svg');
+}
+.face-1-3-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/1-3.svg');
+}
+.face-2-3-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/2-3.svg');
+}
+.face-3-3-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/3-3.svg');
+}
+.face-4-3-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/4-3.svg');
+}
+.face-1-4-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/1-4.svg');
+}
+.face-2-4-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/2-4.svg');
+}
+.face-3-4-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/3-4.svg');
+}
+.face-4-4-feedback-bg-was-right {
+  background-image: url('./assets/img/rindo/4-4.svg');
+}
+
 
 .face-cell.selected {
   background-color: #00f; /* Cor de fundo para rostos selecionados (altere conforme necessário) */
