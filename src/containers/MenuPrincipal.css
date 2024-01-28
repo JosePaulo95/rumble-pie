@@ -53,6 +53,13 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: 'BubblegumSans-Regular';
+  animation: moveGradient 10s linear infinite;
+}
+
+@keyframes moveGradient {
+  to {
+    background-position: 160px 160px; /* Mova o gradiente para criar o efeito de movimento */
+  }
 }
 
 .container {
@@ -61,7 +68,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: white;
+  background-color: rgb(232, 229, 238);
   padding: 20px;
   border-radius: 8px;
   border: 8px solid black; /* Adiciona uma borda preta de 2 pixels */
@@ -77,13 +84,14 @@ h1 {
 }
 
 .menu-button {
+  width: 20vw;
   margin-top: 20px;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 22px;
   font-family: 'BubblegumSans-Regular';
   cursor: pointer;
-  background-color: rgb(219, 182, 15);
-  color: rgb(113, 102, 2);
+  background-color: rgb(236, 195, 13);
+  color: rgb(114, 77, 8);
   border: 1px solid rgb(92, 84, 11); /* Adiciona uma borda preta de 2 pixels */
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px rgb(255, 239, 93); /* Adiciona uma borda interna vermelha de 5 pixels */

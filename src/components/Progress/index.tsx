@@ -10,13 +10,13 @@ interface ProgressProps {
 
 const Progress: React.FC<ProgressProps> = ({ max, current }) => {
   // Cria um array com o número de tortas a serem exibidas
-  const pies = '🥧'.repeat(max - current);
+  const pieArray = Array(max - current).fill(0);
+
   return (
     <div className="progress-container">
-      {/* <p>
-        Progresso: {current} / {max}
-      </p> */}
-      <div className="pie-images">{pies}</div>
+      {pieArray.map((_, index) => (
+        <img key={index} style={{ width: '3vw' }} src="./assets/img/pie.svg" alt="" />
+      ))}
     </div>
   );
 };

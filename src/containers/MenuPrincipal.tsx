@@ -22,7 +22,7 @@ function MenuPrincipal() {
 
   return (
     <div className="container">
-      <h1>Rumble Pie</h1>
+      <img src="./assets/img/rumble-pie-logo.svg" alt="" />
       <Leaderboard numrows={5} data={leaderboardData} />
       <Link to="/play">
         <button className="menu-button">Começar</button>

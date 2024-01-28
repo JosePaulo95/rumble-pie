@@ -34,8 +34,15 @@ const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
   ];
 
   return (
-    <div>
-      <h2>Leaderboard</h2>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
+      <h2>Melhores jogadores:</h2>
       <table>
         <thead>
           <tr>

@@ -119,6 +119,7 @@ function Game({ objetivoId }: GameProps) {
                 textAlign: 'center',
                 border: 'none',
                 outline: 'none',
+                borderBottom: '1px solid black',
                 color: 'purple',
                 fontSize: '3.5em',
                 width: '3em', // Ajuste o valor conforme desejado

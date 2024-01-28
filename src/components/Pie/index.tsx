@@ -33,10 +33,10 @@ const Pie: React.FC<PieProps> = ({ show }) => {
             }}
           ></motion.div>
           <motion.div
-            initial={{ opacity: 1, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 0.9 }}
-            exit={{ opacity: 0, scale: 1 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 1, scale: 0.7, y: 0 }}
+            animate={{ opacity: 1, scale: 0.8, y: 20 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
             style={{
               position: 'absolute',
               width: '100%',
