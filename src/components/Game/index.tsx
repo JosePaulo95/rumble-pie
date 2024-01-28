@@ -89,7 +89,6 @@ function Game({ objetivoId }: GameProps) {
     <div className="vertical-container">
       {currentScreen === 'playing' && (
         <div>
-          screen playing:
           <div className="subcontainer-flex1">
             <Timer bestTime={bestTime} gameInProgress={gameInProgress} />
           </div>

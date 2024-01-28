@@ -1,7 +1,7 @@
 // FaceTable.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css';
-import FaceFactory from '../FaceFactory';
+import Pie from '../Pie';
 
 interface FaceTableProps {
   objetivoId: number;
@@ -18,8 +18,33 @@ const FaceTable: React.FC<FaceTableProps> = ({
   onMistakenShot,
   gameInProgress,
 }) => {
-  const handleClick = (value: string, correct: number) => {
+  const [showPieMatrix, setShowPieMatrix] = useState(
+    Array.from({ length: currentLevel.length }, () =>
+      Array(currentLevel[0].length).fill(false),
+    ),
+  );
+
+  useEffect(() => {
+    // Resetar a matriz quando o currentLevel mudar
+    setShowPieMatrix(
+      Array.from({ length: currentLevel.length }, () =>
+        Array(currentLevel[0].length).fill(false),
+      ),
+    );
+  }, [currentLevel]);
+
+  const handleClick = (rowIndex: number, colIndex: number, correct: number) => {
+    const value: string = currentLevel[rowIndex][colIndex];
     const shot = value.split('-')[1];
+
+    const updatedShowPieMatrix = [
+      ...Array.from({ length: currentLevel.length }, () =>
+        Array(currentLevel[0].length).fill(false),
+      ),
+    ];
+    updatedShowPieMatrix[rowIndex][colIndex] = true;
+    setShowPieMatrix(updatedShowPieMatrix);
+
     if (gameInProgress) {
       if (String(shot) === String(correct)) {
         onCorrectShot();
@@ -39,8 +64,12 @@ const FaceTable: React.FC<FaceTableProps> = ({
                 <td key={colIndex}>
                   <div
                     className={`face-cell face-${value}`}
-                    onClick={() => handleClick(value, objetivoId)}
-                  ></div>
+                    onClick={() => handleClick(rowIndex, colIndex, objetivoId)}
+                  >
+                    <Pie
+                      show={showPieMatrix[rowIndex] && showPieMatrix[rowIndex][colIndex]}
+                    />
+                  </div>
                 </td>
               ))}
             </tr>
