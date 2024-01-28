@@ -3,6 +3,9 @@
     "enabled": false,
     "silent": true
   },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
