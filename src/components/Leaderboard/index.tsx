@@ -42,7 +42,7 @@ const Leaderboard: FC<LeaderboardProps> = ({ numrows, data }) => {
         alignItems: 'center',
       }}
     >
-      <h2>Melhores jogadores:</h2>
+      <h3>Melhores jogadores:</h3>
       <table>
         <thead>
           <tr>

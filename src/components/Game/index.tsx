@@ -80,7 +80,7 @@ function Game({ objetivoId }: GameProps) {
   };
 
   const handleMistakenShot = () => {
-    alert('errado!');
+    // alert('errado!');
     setGameInProgress(false);
     setTimeout(() => {
       navigate('/');

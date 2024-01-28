@@ -13,8 +13,17 @@
 }
 
 .face-background {
-  background: linear-gradient(to top, #29abe2, #fcee21);
+  background: linear-gradient(to top, #ffffff, #29abe2);
 }
+
+.feedback-bg-wrong {
+  background: linear-gradient(to top, #ffffff, #e25429);
+}
+
+.feedback-bg-was-right {
+  background: linear-gradient(to top, #ffffff, #29e270);
+}
+
 
 .face-cell {
   width: 10vw;
