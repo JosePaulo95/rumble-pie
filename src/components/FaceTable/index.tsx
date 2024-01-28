@@ -61,7 +61,7 @@ const FaceTable: React.FC<FaceTableProps> = ({
           {currentLevel.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {row.map((value, colIndex) => (
-                <td key={colIndex}>
+                <td className={'face-background'} key={colIndex}>
                   <div
                     className={`face-cell face-${value}`}
                     onClick={() => handleClick(rowIndex, colIndex, objetivoId)}

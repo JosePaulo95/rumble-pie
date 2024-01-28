@@ -11,6 +11,11 @@
     border-spacing: 0; /* Remova qualquer espaçamento entre as células */
   }
   
+  .face-background {
+    background: linear-gradient(to top, #29abe2, #fcee21);
+
+  }
+  
   .face-cell {
     width: 10vw;
     height: 10vw;
