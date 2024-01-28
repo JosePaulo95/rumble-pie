@@ -112,7 +112,7 @@ function Game({ objetivoId }: GameProps) {
       {currentScreen === 'score' &&
         findPlayerPosition(endTime - startTime - 500 - 100) < 5 && (
           <div>
-            <span>Insira seu nome:</span>
+            <span>Insira suas iniciais:</span>
             <br />
             <input
               style={{
