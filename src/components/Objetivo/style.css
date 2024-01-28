@@ -1,14 +1,13 @@
 /* Objetivo.css */
 .objetivo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .objetivo-content {
-    text-align: center;
+  text-align: center;
 }
-  
-  /* Adicione estilos adicionais conforme necessário */
-  
+
+/* Adicione estilos adicionais conforme necessário */

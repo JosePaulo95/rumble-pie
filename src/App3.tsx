@@ -1,9 +1,11 @@
 // App2.js
 import './App2.css';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Credits from './containers/Credits';
 import InGame from './containers/InGame';
 import MenuPrincipal from './containers/MenuPrincipal';
-import Credits from './containers/Credits';
 
 function App() {
   return (

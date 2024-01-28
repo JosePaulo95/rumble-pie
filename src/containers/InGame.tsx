@@ -1,7 +1,8 @@
 // InGame.js
-import React, { useState, useEffect } from 'react';
-import Objetivo from '../components/Objetivo';
+import React, { useEffect, useState } from 'react';
+
 import Game from '../components/Game';
+import Objetivo from '../components/Objetivo';
 
 function InGame() {
   const [mostrarObjetivo, setMostrarObjetivo] = useState(true);

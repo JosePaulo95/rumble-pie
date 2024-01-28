@@ -1,7 +1,8 @@
 // FaceFactory.jsx
-import React from 'react';
-import PropTypes from 'prop-types';
 import './style.css'; // Importe o arquivo CSS
+
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const FaceFactory = ({ id }) => {
   // Mapeia o ID para a classe CSS usando switch case

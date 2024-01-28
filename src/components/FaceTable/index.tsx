@@ -1,6 +1,8 @@
 // FaceTable.tsx
-import React, { useEffect, useState } from 'react';
 import './style.css';
+
+import React, { useEffect, useState } from 'react';
+
 import Pie from '../Pie';
 
 interface FaceTableProps {

@@ -1,6 +1,7 @@
 // Progress.tsx
-import React from 'react';
 import './style.css';
+
+import React from 'react';
 
 interface ProgressProps {
   max: number;

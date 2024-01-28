@@ -1,6 +1,7 @@
 // Objetivo.tsx
-import { getTextObjetivo } from '../../utils/objetivo';
 import './style.css'; // Importe o arquivo CSS
+
+import { getTextObjetivo } from '../../utils/objetivo';
 
 interface ObjetivoProps {
   objetivoId: number;

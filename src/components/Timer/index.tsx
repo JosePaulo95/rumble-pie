@@ -1,6 +1,8 @@
 // Timer.tsx
 import './style.css';
+
 import React, { useEffect, useState } from 'react';
+
 import { formatTime } from '../../utils/formatTime';
 
 interface TimerProps {

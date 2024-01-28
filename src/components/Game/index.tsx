@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
 import './style.css';
-import Progress from '../Progress';
-import FaceTable from '../FaceTable';
-import Timer from '../Timer';
-import { generateLevel } from '../../utils/generateLevel';
-import { formatTime } from '../../utils/formatTime';
-import { findPlayerPosition } from '../../utils/score';
+
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
+import { formatTime } from '../../utils/formatTime';
+import { generateLevel } from '../../utils/generateLevel';
+import { findPlayerPosition } from '../../utils/score';
+import FaceTable from '../FaceTable';
+import Progress from '../Progress';
+import Timer from '../Timer';
 
 interface GameProps {
   objetivoId: number;

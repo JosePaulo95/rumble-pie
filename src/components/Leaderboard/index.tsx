@@ -1,5 +1,6 @@
 // Leaderboard.tsx
 import React, { FC } from 'react';
+
 import { formatTime } from '../../utils/formatTime';
 
 interface LeaderboardProps {

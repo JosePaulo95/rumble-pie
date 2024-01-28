@@ -1,8 +1,10 @@
 // MenuPrincipal.js
+import './MenuPrincipal.css'; // Importa o arquivo CSS
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import Leaderboard from '../components/Leaderboard';
-import './MenuPrincipal.css'; // Importa o arquivo CSS
 
 function MenuPrincipal() {
   // Estado para armazenar os dados do leaderboard
